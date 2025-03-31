@@ -1,0 +1,25 @@
+type Student {
+    id: ID
+    firstName: String
+    middleName: String
+    lastName: String
+    idNo: String
+    currentCourse: String
+    icoeName: String
+    icoeAddress: String
+    icoeContactNo: String
+}
+
+type Query {
+    getStudents: [Student]
+}
+
+input StudentInput {
+    firstName: String
+    middleName: String
+    lastName: String
+}
+
+type Mutation {
+    storeStudent(student: StudentInput): Student
+}
